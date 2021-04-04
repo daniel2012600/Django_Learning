@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for vendor in object_list %}
+ <div class="">
+     <h1><p>業主 ：{{ vendor.vendor_name }}</p></h1>
+     <h2><a href="{% url 'vendors:vendor_id' vendor.id %}">店名 ：{{ vendor.store_name }}</a></h2>
+ </div>
+{% endfor %}
+{% endblock content %}
